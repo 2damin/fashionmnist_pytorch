@@ -96,9 +96,9 @@ IMAGE_SIZE = 32
 
 composed = transforms.Compose([transforms.Resize((IMAGE_SIZE, IMAGE_SIZE)), transforms.ToTensor()])
 
-train_dataset = dsets.MNIST(root='./data', train=True, download=True, transform=composed)
+train_dataset = dsets.FashionMNIST(root='./data', train=True, download=True, transform=composed)
 
-validation_dataset = dsets.MNIST(root='./data', train=False, download=True, transform=composed)
+validation_dataset = dsets.FashionMNIST(root='./data', train=False, download=True, transform=composed)
 
 save_data(validation_dataset[0], "validation_0.jpg")
 save_data(validation_dataset[1], "validation_1.jpg")
